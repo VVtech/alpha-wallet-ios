@@ -381,11 +381,11 @@ class TokensDataStore {
         let updateTokens = enabledObject.filter { $0 != etherToken }
         let nonERC721Tokens = updateTokens.filter { !$0.isERC721AndNotForTickets }
         let erc721Tokens = updateTokens.filter { $0.isERC721AndNotForTickets }
-        refreshBalanceForTokensThatAreNotNonTicket721(tokens: nonERC721Tokens)
+        refreshBalanceForTokensThatAre721Tickets(tokens: nonERC721Tokens)
         refreshBalanceForERC721Tokens(tokens: erc721Tokens)
     }
 
-    private func refreshBalanceForTokensThatAreNotNonTicket721(tokens: [TokenObject]) {
+    private func refreshBalanceForTokensThatAre721Tickets(tokens: [TokenObject]) {
         assert(!tokens.contains { $0.isERC721AndNotForTickets })
         var count = 0
         //So we refresh the UI. Possible improvement is to refresh earlier, but still refresh at the end

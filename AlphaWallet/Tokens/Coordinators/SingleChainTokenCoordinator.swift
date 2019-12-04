@@ -238,7 +238,7 @@ class SingleChainTokenCoordinator: Coordinator {
                     //Handled in TokensDataStore.refreshBalanceForERC721Tokens()
                     break
                 case .erc721ForTickets:
-                    //Handled in TokensDataStore.refreshBalanceForNonERC721TicketTokens()
+                    //Handled in TokensDataStore.refreshBalanceForTokensThatAre721Tickets()
                     break
                 case .nativeCryptocurrency:
                     break
