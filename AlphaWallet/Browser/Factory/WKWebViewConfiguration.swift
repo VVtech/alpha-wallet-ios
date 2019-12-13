@@ -118,6 +118,17 @@ extension WKWebViewConfiguration {
                           //send back the coinbase account as an array of one
                           resolve([addressHex])
                       })
+                   },
+                   getChainId: function() {
+                        return new Promise(function(resolve, reject) {
+                            resolve(chainID)
+                        })
+                   },
+                   requestAccounts: function() {
+                        return new Promise(function(resolve, reject) {
+                            //send back the coinbase account as an array of one
+                            resolve([addressHex])
+                        })
                    }
                }, {
                    address: addressHex,
